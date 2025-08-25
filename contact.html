@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Contacts</title>
+        <link rel="stylesheet" href="CSS/style.css">
+    </head>
+    <body class="contact">
+        <div class="container">
+            <nav>
+                <ul class="menu">
+                    <li><a href="home.html">Accueil</a></li>
+                    <li><a href="about.html">Qui sommes-nous ?</a></li>
+                    <li>
+                        <a href="product.html">Nos services</a>
+                        <ul class="submenu">
+                            <li><a href="gallery.html">Notre Galerie Photo</a></li>
+                            <li><a href="events.html">Nos Événements</a></li>
+                            <li><a href="shop.html">Notre Boutique</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <h2><i>Nous contacter:</i></h2>
+
+            <form method="post" action="https://hnitest.go.yj.fr">
+
+	            First Name: <input class="yourclass" id="firstname" size="10" maxlength="40" name="firstname" /><br />
+	            Last Name: <input class="yourclass" id="lastname" type="text" size="10" maxlength="40" name="lastname" /><br />
+                Country: <select class="yourclass" name="country" id="country"><br />
+                            <option value="france">France</option>
+                            <option value="belgique">Belgique</option>
+                            <option value="suisse">Suisse</option>
+                            <option value="canada">Canada</option>
+                        </select></br>
+                Mail: <input class="yourclass" id="mail" type="email" name="mail" placeholder="yourmail@yahoo.com" ><br />
+                Request: </br> <textarea class="yourclass" name="request" id="request" cols="66" rows="10" ></textarea><br />
+
+	
+	            <input type="submit" value="Send"  style="font-size:20px; padding:15px 40px;" />
+	
+            </form>
+
+            <div class="info-box">
+                <h3>Pour en savoir plus:</h3>
+
+                <ul type="disc">
+                    <li><a href="home.html">Accueil</a></li>
+                    <li><a href="about.html">Qui sommes-nous ?</a></li>
+                    <li>
+                        <a href="product.html">Nos services</a>
+                        <ul type="circle">
+                            <li><a href="gallery.html">Notre Galerie Photo</a></li>
+                            <li><a href="events.html">Nos Événements</a></li>
+                            <li><a href="shop.html">Notre Boutique</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <hr/>
+
+            <p class="copyright">&copy; Les Rois du Haricot Vert 2025</p>
+        </div>
+    </body>
+</html>
