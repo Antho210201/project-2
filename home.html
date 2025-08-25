@@ -1,87 +1,93 @@
 <!DOCTYPE html>
-
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <title>Accueil</title>
-        <link rel="stylesheet" href="CSS/style.css">
-    </head>
-    <body class="home">
-        <div class="container">
-            <nav>
-                <ul class="menu">
-                    <li><a href="home.html">Accueil</a></li>
-                    <li><a href="about.html">Qui sommes-nous ?</a></li>
-                    <li>
-                        <a href="product.html">Nos services</a>
-                        <ul class="submenu">
-                            <li><a href="gallery.html">Notre Galerie Photo</a></li>
-                            <li><a href="events.html">Nos Événements</a></li>
-                            <li><a href="shop.html">Notre Boutique</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+<head>
+  <meta charset="utf-8">
+  <title>Accueil</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"> 
+</head>
+<body class="bg-light">
 
-            <img alt="html image example" src="Pictures/coup-de-mise-au-point-selective-d-une-plante-verte-dans-le-domaine.jpg"  width="960" height="750"  />
+  <div class="container">
 
-            <div class="main-title">
-                <h1>
-                    Les <span class="fancy">Rois</span><br>
-                    du<br>
-                    <span class="fancy">Haricot Vert</span>
-                </h1>
-
-                <p class="slogan">A VOTRE SERVICE DEPUIS 1975</p>
-            </div>
-
-            <div class="valeurs">    
-                <h2>Nos grandes valeurs</h2>
-
-                <ol>
-                    <li>Fraicheur garantie</li>
-                    <li>Agriculture durable</li>
-                    <li>Recettes gourmandes</li>
-                </ol>
-            </div>
-
-            <div class="info-box">
-                <h3>Pour en savoir plus:</h3>
-
-                <ul type="disc">
-                    <li><a href="home.html">Accueil</a></li>
-                    <li><a href="about.html">Qui sommes-nous ?</a></li>
-                    <li>
-                        <a href="product.html">Nos services</a>
-                        <ul type="circle">
-                            <li><a href="gallery.html">Notre Galerie Photo</a></li>
-                            <li><a href="events.html">Nos Événements</a></li>
-                            <li><a href="shop.html">Notre Boutique</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
-
-                </ul>
-
-            </div>
-
-            <hr/>
-
-            <p class="copyright">&copy; Les Rois du Haricot Vert 2025</p>
-
-
-
-
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">Les Rois du Haricot Vert</a>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a href="home.html" class="nav-link active"><i class="bi-house-door-fill"></i> Accueil</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link"><i class="bi-person-fill"></i> Qui sommes-nous ?</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+                <i class="bi-alarm"></i> Nos services
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="gallery.html"><i class="bi-camera-fill"></i> Notre Galerie Photo</a></li>
+                <li><a class="dropdown-item" href="events.html"><i class="bi-emoji-smile-fill"></i> Nos Événements</a></li>
+                <li><a class="dropdown-item" href="shop.html"><i class="bi-cart-fill"></i> Notre Boutique</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="contact.html" class="nav-link"><i class="bi-envelope-fill"></i> Contact</a></li>
+          </ul>
         </div>
+      </div>
+    </nav>
 
-        
-        
+    <!-- Image avec bandeau -->
+    <div class="position-relative text-center mb-4">
+        <img src="Pictures/coup-de-mise-au-point-selective-d-une-plante-verte-dans-le-domaine.jpg"
+       class="img-fluid rounded shadow" alt="Plante verte">
+       
+  <!-- Texte centré sur l'image -->
+        <div class="position-absolute top-50 start-50 translate-middle bg-dark bg-opacity-50 text-white rounded p-3">
+            <h1 class="display-4 mb-2">
+            Les <span class="fst-italic">Rois</span><br>
+            du<br>
+            <span class="fst-italic">Haricot Vert</span>
+            </h1>
+            <p class="text-warning fw-bold mb-0">A VOTRE SERVICE DEPUIS 1975</p>
+        </div>
+    </div>
 
+    <!-- Valeurs -->
+    <div class="text-center mb-5">
+      <h2 class="text-success mb-3">Nos grandes valeurs</h2>
+      <ol class="list-group list-group-numbered">
+        <li class="list-group-item">Fraîcheur garantie</li>
+        <li class="list-group-item">Agriculture durable</li>
+        <li class="list-group-item">Recettes gourmandes</li>
+      </ol>
+    </div>
 
+    <!-- Info Box -->
+    <div class="alert alert-info">
+      <h3>Pour en savoir plus :</h3>
+      <ul class="mb-0">
+        <li><a href="home.html" class="link-dark">Accueil</a></li>
+        <li><a href="about.html" class="link-dark">Qui sommes-nous ?</a></li>
+        <li>Nos services
+          <ul>
+            <li><a href="gallery.html" class="link-dark">Notre Galerie Photo</a></li>
+            <li><a href="events.html" class="link-dark">Nos Événements</a></li>
+            <li><a href="shop.html" class="link-dark">Notre Boutique</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" class="link-dark">Contact</a></li>
+      </ul>
+    </div>
 
+    <hr>
 
+    <!-- Footer -->
+    <footer class="text-center py-3">
+      <p class="mb-0">&copy; Les Rois du Haricot Vert 2025</p>
+    </footer>
 
+  </div>
 
-    </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+          crossorigin="anonymous"></script>
+</body>
 </html>

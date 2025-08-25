@@ -4,69 +4,110 @@
     <head>
         <meta charset="utf-8">
         <title>Contacts</title>
-        <link rel="stylesheet" href="CSS/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     </head>
-    <body class="contact">
+    <body class="bg-light">
         <div class="container">
-            <nav>
-                <ul class="menu">
-                    <li><a href="home.html">Accueil</a></li>
-                    <li><a href="about.html">Qui sommes-nous ?</a></li>
-                    <li>
-                        <a href="product.html">Nos services</a>
-                        <ul class="submenu">
-                            <li><a href="gallery.html">Notre Galerie Photo</a></li>
-                            <li><a href="events.html">Nos Événements</a></li>
-                            <li><a href="shop.html">Notre Boutique</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-
-            <h2><i>Nous contacter:</i></h2>
-
-            <form method="post" action="https://hnitest.go.yj.fr">
-
-	            First Name: <input class="yourclass" id="firstname" size="10" maxlength="40" name="firstname" /><br />
-	            Last Name: <input class="yourclass" id="lastname" type="text" size="10" maxlength="40" name="lastname" /><br />
-                Country: <select class="yourclass" name="country" id="country"><br />
-                            <option value="france">France</option>
-                            <option value="belgique">Belgique</option>
-                            <option value="suisse">Suisse</option>
-                            <option value="canada">Canada</option>
-                        </select></br>
-                Mail: <input class="yourclass" id="mail" type="email" name="mail" placeholder="yourmail@yahoo.com" ><br />
-                Request: </br> <textarea class="yourclass" name="request" id="request" cols="66" rows="10" ></textarea><br />
-
-	
-	            <input type="submit" value="Send"  style="font-size:20px; padding:15px 40px;" />
-	
-            </form>
-
-            <div class="info-box">
-                <h3>Pour en savoir plus:</h3>
-
-                <ul type="disc">
-                    <li><a href="home.html">Accueil</a></li>
-                    <li><a href="about.html">Qui sommes-nous ?</a></li>
-                    <li>
-                        <a href="product.html">Nos services</a>
-                        <ul type="circle">
-                            <li><a href="gallery.html">Notre Galerie Photo</a></li>
-                            <li><a href="events.html">Nos Événements</a></li>
-                            <li><a href="shop.html">Notre Boutique</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
-
-                </ul>
-
-            </div>
-
-            <hr/>
-
-            <p class="copyright">&copy; Les Rois du Haricot Vert 2025</p>
+            
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">Les Rois du Haricot Vert</a>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a href="home.html" class="nav-link"><i class="bi-house-door-fill"></i> Accueil</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link"><i class="bi-person-fill"></i> Qui sommes-nous ?</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+                <i class="bi-alarm"></i> Nos services
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="gallery.html"><i class="bi-camera-fill"></i> Notre Galerie Photo</a></li>
+                <li><a class="dropdown-item" href="events.html"><i class="bi-emoji-smile-fill"></i> Nos Événements</a></li>
+                <li><a class="dropdown-item" href="shop.html"><i class="bi-cart-fill"></i> Notre Boutique</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="contact.html" class="nav-link active"><i class="bi-envelope-fill"></i> Contact</a></li>
+          </ul>
         </div>
+      </div>
+    </nav>
+
+        <h2 class="mb-4 text-center"><i>Nous contacter :</i></h2>
+
+             <!-- Formulaire de contact -->
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-8 col-lg-6">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <form method="post" action="https://hnitest.go.yj.fr">
+                  
+                  <div class="mb-3">
+                    <label for="firstname" class="form-label">Prénom</label>
+                    <input type="text" class="form-control" id="firstname" name="firstname" maxlength="40" required>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="lastname" class="form-label">Nom</label>
+                    <input type="text" class="form-control" id="lastname" name="lastname" maxlength="40" required>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="country" class="form-label">Pays</label>
+                    <select class="form-select" id="country" name="country">
+                      <option value="france">France</option>
+                      <option value="belgique">Belgique</option>
+                      <option value="suisse">Suisse</option>
+                      <option value="canada">Canada</option>
+                    </select>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="mail" class="form-label">Adresse e-mail</label>
+                    <input type="email" class="form-control" id="mail" name="mail" placeholder="yourmail@yahoo.com" required>
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="request" class="form-label">Votre demande</label>
+                    <textarea class="form-control" id="request" name="request" rows="5" required></textarea>
+                  </div>
+
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-lg px-5">Envoyer</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+            <!-- Info Box -->
+    <div class="alert alert-info">
+      <h3>Pour en savoir plus :</h3>
+      <ul class="mb-0">
+        <li><a href="home.html" class="link-dark">Accueil</a></li>
+        <li><a href="about.html" class="link-dark">Qui sommes-nous ?</a></li>
+        <li>Nos services
+          <ul>
+            <li><a href="gallery.html" class="link-dark">Notre Galerie Photo</a></li>
+            <li><a href="events.html" class="link-dark">Nos Événements</a></li>
+            <li><a href="shop.html" class="link-dark">Notre Boutique</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html" class="link-dark">Contact</a></li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer class="text-center py-3">
+      <p class="mb-0">&copy; Les Rois du Haricot Vert 2025</p>
+    </footer>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
     </body>
 </html>
